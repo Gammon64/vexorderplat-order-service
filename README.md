@@ -12,11 +12,13 @@ Este é um serviço de pedidos construído com Spring Boot, responsável por ger
 ## Configuração
 
 1. Copie o arquivo `.env.example` para `.env`:
+
    ```
    cp .env.example .env
    ```
 
 2. Edite o arquivo `.env` com suas configurações:
+
    ```
    DB_HOST=localhost
    DB_PORT=5432
@@ -46,6 +48,7 @@ O serviço estará disponível em `http://localhost:8081`.
 **Endpoint:** `POST /orders`
 
 **Corpo da Requisição:**
+
 ```json
 {
   "customerId": "550e8400-e29b-41d4-a716-446655440000",
@@ -54,6 +57,7 @@ O serviço estará disponível em `http://localhost:8081`.
 ```
 
 **Exemplo de curl:**
+
 ```bash
 curl -X POST http://localhost:8081/orders \
   -H "Content-Type: application/json" \
@@ -64,12 +68,12 @@ curl -X POST http://localhost:8081/orders \
 ```
 
 **Resposta de Sucesso:**
+
 ```json
 {
-  "id": 1,
+  "id": "123e4567-e89b-12d3-a456-426614174000",
   "customerId": "550e8400-e29b-41d4-a716-446655440000",
   "total": 150.75,
-  "status": "CREATED",
   "createdAt": "2023-10-01T12:00:00Z"
 }
 ```
